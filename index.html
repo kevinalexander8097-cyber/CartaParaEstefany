@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Estefany, mi conexión especial 💫❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9ec4, #ff758c, #ff4d6d);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #fff;
+            text-align: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 3.2em;
+            color: #fff;
+            text-shadow: 0 0 20px #ff4d6d, 0 0 40px #c2185b;
+            margin: 40px 0 10px;
+            animation: pulse 3s infinite alternate;
+        }
+        @keyframes pulse {
+            from { text-shadow: 0 0 20px #ff4d6d; }
+            to { text-shadow: 0 0 40px #ff4d6d, 0 0 60px #c2185b; }
+        }
+        .subtitulo {
+            font-size: 1.6em;
+            color: #ffebee;
+            margin: 0 0 40px;
+            text-shadow: 0 0 15px rgba(255,255,255,0.8);
+        }
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            max-width: 92%;
+            margin: 25px auto;
+            color: #fffde7;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .foto {
+            width: 90%;
+            max-width: 450px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(255,77,109,0.6);
+            margin: 35px auto;
+            display: block;
+            border: 5px solid rgba(255,255,255,0.7);
+            transition: transform 0.5s;
+        }
+        .foto:hover {
+            transform: scale(1.05);
+        }
+        .corazon-mensaje {
+            font-size: 8em;
+            cursor: pointer;
+            margin: 60px 0 40px;
+            transition: all 0.5s;
+            display: inline-block;
+            filter: drop-shadow(0 0 20px #ff4d6d);
+            animation: beat 1.5s infinite;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        .corazon-mensaje:hover, .corazon-mensaje:active {
+            transform: scale(1.4) rotate(15deg);
+            filter: drop-shadow(0 0 40px #ff1744);
+        }
+        #mensaje-escondido {
+            display: none;
+            font-size: 1.6em;
+            color: #fff;
+            background: linear-gradient(135deg, rgba(200,24,91,0.85), rgba(136,14,79,0.85));
+            padding: 40px;
+            border-radius: 30px;
+            margin: 50px auto;
+            max-width: 90%;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.5), inset 0 0 30px rgba(255,255,255,0.2);
+            border: 3px solid #ff80ab;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+        #mensaje-escondido.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .heart {
+            position: fixed;
+            top: -100px;
+            font-size: 2.2em;
+            pointer-events: none;
+            user-select: none;
+            animation: fall linear infinite;
+            opacity: 0.85;
+            text-shadow: 0 0 12px #fff;
+            z-index: -2;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg) scale(0.6); opacity: 0.9; }
+            100% { transform: translateY(120vh) rotate(1080deg) scale(1.0); opacity: 0; }
+        }
+        .firma {
+            font-size: 1.5em;
+            color: #ffebee;
+            margin: 50px 0 20px;
+            font-style: italic;
+            text-shadow: 0 0 15px #ff4d6d;
+        }
+        .copyright {
+            font-size: 1em;
+            color: #ffccbc;
+            opacity: 0.9;
+        }
+        #btnMusica {
+            font-size: 1.3em;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #ff80ab, #f48fb1, #e91e63);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            margin: 25px auto;
+            cursor: pointer;
+            display: none;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(233,30,99,0.5);
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+        #btnMusica::before {
+            content: '💕 ';
+            animation: beat 1.8s infinite;
+        }
+        #btnMusica:hover {
+            transform: scale(1.08);
+            box-shadow: 0 12px 35px rgba(233,30,99,0.7);
+            background: linear-gradient(135deg, #f48fb1, #e91e63, #c2185b);
+        }
+        #btnMusica:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz día especial, mi amor Estefany! 💫❤️</h1>
+        <p class="subtitulo">La persona que hace que todo valga la pena, sin importar la distancia 🌹✨</p>
+        
+        <p>Desde Lima hasta Trujillo, la distancia no ha podido apagar lo que sentimos. Aunque aún no nos hemos conocido en persona, cada mensaje, cada detalle que compartimos hace que esto sea más grande y más bonito.💕</p>
+        
+        <p>Hemos pasado por mucho, hemos tenido momentos difíciles (como en todas las parejas), pero hoy volvimos a estar juntos porque lo nuestro vale la pena. Eso me hace creer aún más en nosotros.❤️</p>
+        
+        <!-- Imágenes con tus enlaces de Postimages -->
+        <img src="https://i.postimg.cc/sMtN2JdN/foto1.jpg" alt="Tú, mi inspiración diaria" class="foto">
+        
+        <img src="https://i.postimg.cc/ZW9QZM2t/foto2.jpg" alt="La sonrisa que me motiva siempre" class="foto">
+        
+        <p class="subtitulo">¡Toca este corazón latiendo y siente todo lo que guardo para ti! 🥹💘</p>
+        <div class="corazon-mensaje" onclick="mostrarMensaje()">💖</div>
+        
+        <button id="btnMusica">💕 Escucha nuestra canción, mi vida 🎶</button>
+        
+        <div id="mensaje-escondido">
+            Estefany, mi nena hermosa... <br><br>
+            Aunque la distancia nos tenga esperando para conocernos en persona, la conexión que tenemos es increíble y real. Cada conversación me hace sonreír, cada "te extraño" me llega al alma.💓<br><br>
+            Hemos pasado por cosas duras, pero siempre elegimos volver porque lo nuestro es especial. Gracias por no rendirte, por tus mensajes que me levantan el ánimo, por ser tan auténtica y por hacerme sentir que esto es para siempre.🌹<br><br>
+            Espero de corazón que muy pronto podamos estar frente a frente, mirarnos a los ojos, reírnos juntos y crear recuerdos. Mientras tanto, cada día te llevo conmigo en mi mente y en mi corazón. ✨<br>
+            Te amo muchisimo mi vida.❤️
+        </div>
+
+        <p class="firma">Con el alma entera y toda mi esperanza,<br>Tu bb hermoso Kevin ❤️</p>
+        
+        <p class="copyright">© 2026 Kevin Ato – Edición Ultra Romántica para la única que conquista mi mundo digital y real 💕<br>Prohibido compartir sin mi permiso.</p>
+    </div>
+
+    <!-- Música de fondo -->
+    <audio id="musica" loop preload="auto">
+        <source src="https://files.catbox.moe/7p5xy5.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        function mostrarMensaje() {
+            const msg = document.getElementById('mensaje-escondido');
+            msg.style.display = 'block';
+            setTimeout(() => msg.classList.add('visible'), 100);
+            msg.scrollIntoView({ behavior: 'smooth' });
+
+            const audio = document.getElementById('musica');
+            const btnMusica = document.getElementById('btnMusica');
+
+            audio.volume = 0.25;
+
+            audio.play().then(() => {
+                btnMusica.textContent = '💕 Pausar nuestra canción';
+            }).catch((error) => {
+                console.log("Autoplay bloqueado:", error);
+                btnMusica.style.display = 'block';
+            });
+        }
+
+        document.getElementById('btnMusica').addEventListener('click', () => {
+            const audio = document.getElementById('musica');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('btnMusica').textContent = '💕 Pausar nuestra canción';
+            } else {
+                audio.pause();
+                document.getElementById('btnMusica').textContent = '💕 Escucha nuestra canción, mi vida 🎶';
+            }
+        });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = ['💖', '❤️', '💕', '💗', '💘', '💝', '✨'][Math.floor(Math.random() * 7)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 8 + 10) + 's';
+            heart.style.fontSize = (Math.random() * 1.8 + 1.5) + 'em';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 12000);
+        }
+        setInterval(createHeart, 800);
+    </script>
+</body>
+</html>
